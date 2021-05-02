@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>FlagsAreas-Plugin</groupId>
+  <artifactId>FlagsAreas-Plugin</artifactId>
+  <version>0.0.3-SNAPSHOT</version>
+  <name>FlagsAreas Plugin</name>
+  <description>Plugin dodający itemy i efekty z Asterixa i Obelixa</description>
+  <repositories>
+  	<repository>
+    	<id>in-project</id>
+    	<name>In Project Repo</name>
+    	<url>file://${project.basedir}/libs</url>
+	</repository>
+    <repository>
+        <id>codemc-repo</id>
+        <url>https://repo.codemc.io/repository/maven-public/</url>
+    </repository>
+  </repositories>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+      	<filtering>true</filtering>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+	 <dependency>
+        <groupId>org.yatopiamc</groupId>
+        <artifactId>yatopia-api</artifactId>
+        <version>1.16.5-R0.1-SNAPSHOT</version>
+        <scope>provided</scope>
+    </dependency>
+ 	<dependency>
+    	<groupId>Plugin-Annotation</groupId>
+    	<artifactId>Plugin-Annotation</artifactId>
+    	<version>1.2.4-SNAPSHOT</version>
+    	<scope>system</scope>
+    	<systemPath>C:/Users/Hp/eclipse-workspace/FlagsAreas Plugin/libs/Plugin-Annotation/Plugin-Annotation/plugin-annotations-1.2.4-SNAPSHOT.jar</systemPath>
+	</dependency>
+  </dependencies>
+</project>
